@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume and Bio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+
+        /* Header */
+        .header {
+            background: #007acc;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-list li a:hover {
+            background-color: #005f99;
+        }
+
+        /* Sections */
+        .section {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #007acc;
+            margin-bottom: 1rem;
+        }
+
+        /* Lists */
+        ul {
+            list-style: square inside;
+            padding: 0;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        /* Contact Form */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        input, textarea, button {
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        button {
+            background: #007acc;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background: #005f99;
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("contact-form");
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const message = document.getElementById("message").value;
+
+                if (name && email && message) {
+                    alert(`Thank you, ${name}! Your message has been received.`);
+                    form.reset();
+                } else {
+                    alert("Please fill out all fields before submitting.");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="header">
+        <h1>Aayushi Maheshwari</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#bio">Bio</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="bio" class="section">
+            <h2>Bio</h2>
+            <p>Hello! My name is Aayushi Maheshwari. I am passionate about technology, problem-solving, and continuous learning. I strive to create meaningful solutions that make a difference.</p>
+        </section>
+
+        <section id="resume" class="section">
+            <h2>Resume</h2>
+            <h3>Education</h3>
+            <ul>
+                <li>Currently pursuing Bachelor's Degree in Computer Science - DSATM</li>
+                <li>High School - MIS</li>
+            </ul>
+
+            
+
+            <h3>Skills</h3>
+            <ul>
+                <li>Programming Languages: HTML, CSS, JavaScript, Python</li>
+                <li>Frameworks: React, Node.js</li>
+                <li>Tools: Git, Docker</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+           <li>
+            Mail : aayushimaheshwari31@gmail.com
+           </li> 
+           <li>contact : 9079823674</li> 
+           
+           
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Aayushi Maheshwari. All rights reserved.</p>
+    </footer>
+</body>
+</html>
